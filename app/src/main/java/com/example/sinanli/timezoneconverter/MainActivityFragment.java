@@ -136,103 +136,43 @@ public class MainActivityFragment extends Fragment {
                 if (position == 0){
                     foreignH = hour - 12;
 
-                    if (foreignH >= 24){
-                        dayAfter = true;
-                        foreignH -= 24;
-                    } else if (foreignH < 0){
-                        dayBefore = true;
-                        foreignH = 24 + foreignH;
-                    } else {
-                        dayBefore = false;
-                        dayAfter = false;
-                    }
-
                     inputCheck();
+                    dayCheck();
                     prompt();
 
                 } else if (position == 1){
                     foreignH = hour + 2;
 
-                    if (foreignH >= 24){
-                        dayAfter = true;
-                        foreignH -= 24;
-                    } else if (foreignH < 0){
-                        dayBefore = true;
-                        foreignH = 24 + foreignH;
-                    } else {
-                        dayBefore = false;
-                        dayAfter = false;
-                    }
-
                     inputCheck();
+                    dayCheck();
                     prompt();
 
                 } else if (position == 2){
                     foreignH = hour - 6;
 
-                    if (foreignH >= 24){
-                        dayAfter = true;
-                        foreignH -= 24;
-                    } else if (foreignH < 0){
-                        dayBefore = true;
-                        foreignH = 24 + foreignH;
-                    } else {
-                        dayBefore = false;
-                        dayAfter = false;
-                    }
-
                     inputCheck();
+                    dayCheck();
                     prompt();
 
                 } else if (position == 3){
                     foreignH = hour + 1;
 
-                    if (foreignH >= 24){
-                        dayAfter = true;
-                        foreignH -= 24;
-                    } else if (foreignH < 0){
-                        dayBefore = true;
-                        foreignH = 24 + foreignH;
-                    } else {
-                        dayBefore = false;
-                        dayAfter = false;
-                    }
-
                     inputCheck();
+                    dayCheck();
                     prompt();
 
                 } else if (position == 4){
                     foreignH = hour - 7;
 
-                    if (foreignH >= 24){
-                        dayAfter = true;
-                        foreignH -= 24;
-                    } else if (foreignH < 0){
-                        dayBefore = true;
-                        foreignH = 24 + foreignH;
-                    } else {
-                        dayBefore = false;
-                        dayAfter = false;
-                    }
-
                     inputCheck();
+                    dayCheck();
                     prompt();
 
                 } else if (position == 5){
                     foreignH = hour - 6;
 
-                    if (foreignH >= 24){
-                        dayAfter = true;
-                        foreignH -= 24;
-                    } else if (foreignH < 0){
-                        dayBefore = true;
-                        foreignH = 24 + foreignH;
-                    } else {
-                        dayBefore = false;
-                        dayAfter = false;
-                    }
-
                     inputCheck();
+                    dayCheck();
                     prompt();
 
                 }
@@ -254,6 +194,19 @@ public class MainActivityFragment extends Fragment {
             return false;
         } else {
             return true;
+        }
+    }
+
+    public void dayCheck() {
+        if (foreignH >= 24){
+            dayAfter = true;
+            foreignH -= 24;
+        } else if (foreignH < 0){
+            dayBefore = true;
+            foreignH = 24 + foreignH;
+        } else {
+            dayBefore = false;
+            dayAfter = false;
         }
     }
 
