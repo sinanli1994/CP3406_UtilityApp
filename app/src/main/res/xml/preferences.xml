@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:defaultValue="4"
+        android:entries="@array/colors_list"
+        android:entryValues="@array/colors_list"
+        android:key="numSelection"
+        android:summary="@string/number_of_displayed_counties_summary"
+        android:title="Number of Displayed Counties" />
+</PreferenceScreen>
